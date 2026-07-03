@@ -2,9 +2,7 @@ import streamlit as st
 import pdfplumber
 import google.generativeai as genai
 
-import os
-
-genai.configure(api_key=os.getenv("AQ.Ab8RN6IONgCk64QCaw0LDJmaN4qOnFs7SWkOmoEqLyQINRDZVA"))
+genai.configure(api_key="AQ.Ab8RN6LfOfOwchVttNAcDL6Y1KgQG_OVWH6m9OTphkB4BGt5zg")
 
 model = genai.GenerativeModel(
     "gemini-2.5-flash"
@@ -18,6 +16,7 @@ uploaded_file = st.file_uploader(
     "Upload Resume PDF",
     type=["pdf"]
 )
+
 
 if uploaded_file:
 
